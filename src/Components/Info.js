@@ -9,7 +9,7 @@ export default function Info(props) {
             <Card.Header>React Redux Practise - Assignment 2</Card.Header>
             <Card.Body>
                 <Card.Title><strong>Picture Album Viewer</strong></Card.Title>
-                {location.pathname == "/" ? 
+                {location.pathname === "/" ? 
                 <p>Currently Displaying Album List, Select an Album to View the Images</p>
                 : <Link to={"/"}>
                     <Button variant="primary">Back to Album List</Button>

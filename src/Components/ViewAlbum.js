@@ -7,7 +7,8 @@ import { connect } from 'react-redux'
 const buildImageDisplay = (images) => {
     const imageGrid = images.map(img => {
         return (
-            <Col>
+            <Col key={img.id}>
+                <React.Fragment>
                 <Card style={{ width: '15rem' }}>
                     <Card.Img variant="top" src={img.thumbnailUrl} />
                     <Card.Body>
@@ -16,6 +17,7 @@ const buildImageDisplay = (images) => {
                             <Button variant="primary">Go somewhere</Button></a>
                     </Card.Body>
                 </Card>
+                </React.Fragment>
             </Col>
         )
     })

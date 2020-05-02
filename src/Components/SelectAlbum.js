@@ -22,11 +22,13 @@ export class SelectAlbum extends React.Component {
         return (
             albums.map(album => {
                 return (
-                    <ListGroup.Item>
-                        <Link to={`/viewAlbum/${album.id}`}>
-                        {album.title}
-                        </Link>
-                    </ListGroup.Item>
+                    <React.Fragment key={album.id}>
+                        <ListGroup.Item>
+                            <Link to={`/viewAlbum/${album.id}`}>
+                                {album.title}
+                            </Link>
+                        </ListGroup.Item>
+                    </React.Fragment>
                 )
             })
 
