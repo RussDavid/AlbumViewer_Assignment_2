@@ -68,12 +68,12 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
+        titleResponse: (title) => {
+            dispatch(setTitle(title))
+        },
         imageResponse: (img) => {
             dispatch(setImages(img))
 
-        },
-        titleResponse: (title) => {
-            dispatch(setTitle(title))
         }
     }
 }
